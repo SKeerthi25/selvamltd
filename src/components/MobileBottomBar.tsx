@@ -70,6 +70,7 @@ export default function MobileBottomBar() {
           {/* Quick Quote */}
           <Link
             href="/quote"
+            prefetch={true}
             className="flex items-center justify-center gap-2 bg-gradient-to-r from-zoho-blue to-blue-600 hover:from-blue-600 hover:to-zoho-blue text-white font-bold py-3 px-4 rounded-xl text-xs sm:text-sm transition min-h-[46px] shadow-md shadow-blue-500/25"
           >
             <FileText className="w-4 h-4" />

@@ -5,30 +5,17 @@ import Logo from "./Logo";
 
 export default function SplashLoader() {
   const [mounted, setMounted] = useState(false);
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   const [fading, setFading] = useState(false);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     setMounted(true);
-    // Check prefers-reduced-motion
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
 
-    // Check sessionStorage
-    const hasSeenSplash = sessionStorage.getItem("pselvam_splash_seen_v2");
-
-    if (hasSeenSplash || prefersReducedMotion) {
-      setVisible(false);
-      return;
-    }
-
-    setVisible(true);
-
-    // Progress bar animation from 0% to 100% across 2000ms
+    // Progress bar animation from 0% to 100% over 1400ms
     const interval = 20; // 20ms steps
-    const step = 100 / (2000 / interval);
+    const duration = 1400;
+    const step = 100 / (duration / interval);
     const progressTimer = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
@@ -39,15 +26,14 @@ export default function SplashLoader() {
       });
     }, interval);
 
-    // Fade out at 2000ms
+    // Start fade out at 1500ms
     const timer = setTimeout(() => {
       setFading(true);
       const hideTimer = setTimeout(() => {
         setVisible(false);
-        sessionStorage.setItem("pselvam_splash_seen_v2", "true");
-      }, 500); // smooth 500ms fade transition
+      }, 400); // smooth 400ms fade transition
       return () => clearTimeout(hideTimer);
-    }, 2000);
+    }, 1500);
 
     return () => {
       clearInterval(progressTimer);
@@ -55,7 +41,7 @@ export default function SplashLoader() {
     };
   }, []);
 
-  if (!mounted || !visible) return null;
+  if (!visible) return null;
 
   return (
     <div

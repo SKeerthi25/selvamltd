@@ -119,6 +119,7 @@ export default function Navbar() {
             <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
               <Link
                 href="/"
+                prefetch={true}
                 className={`px-3 py-2 rounded-xl text-sm font-semibold transition ${
                   pathname === "/"
                     ? "text-zoho-blue dark:text-blue-400 bg-blue-50/70 dark:bg-blue-950/40"
@@ -162,6 +163,8 @@ export default function Navbar() {
                         </span>
                         <Link
                           href="/services"
+                          prefetch={true}
+                          onClick={() => setServicesDropdownOpen(false)}
                           className="text-xs font-semibold text-zoho-blue dark:text-blue-400 hover:underline flex items-center gap-1"
                         >
                           All Services Overview <ArrowRight className="w-3 h-3" />
@@ -175,6 +178,8 @@ export default function Navbar() {
                             <Link
                               key={item.href}
                               href={item.href}
+                              prefetch={true}
+                              onClick={() => setServicesDropdownOpen(false)}
                               className="p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/80 transition flex items-start gap-3 group border border-transparent hover:border-slate-200 dark:hover:border-slate-700"
                             >
                               <div
@@ -201,6 +206,7 @@ export default function Navbar() {
 
               <Link
                 href="/cctv-packages"
+                prefetch={true}
                 className={`px-3 py-2 rounded-xl text-sm font-semibold transition ${
                   pathname === "/cctv-packages"
                     ? "text-zoho-blue dark:text-blue-400 bg-blue-50/70 dark:bg-blue-950/40"
@@ -212,6 +218,7 @@ export default function Navbar() {
 
               <Link
                 href="/projects"
+                prefetch={true}
                 className={`px-3 py-2 rounded-xl text-sm font-semibold transition ${
                   pathname === "/projects"
                     ? "text-zoho-blue dark:text-blue-400 bg-blue-50/70 dark:bg-blue-950/40"
@@ -223,6 +230,7 @@ export default function Navbar() {
 
               <Link
                 href="/areas-we-cover"
+                prefetch={true}
                 className={`px-3 py-2 rounded-xl text-sm font-semibold transition ${
                   pathname === "/areas-we-cover"
                     ? "text-zoho-blue dark:text-blue-400 bg-blue-50/70 dark:bg-blue-950/40"
@@ -234,6 +242,7 @@ export default function Navbar() {
 
               <Link
                 href="/about"
+                prefetch={true}
                 className={`px-3 py-2 rounded-xl text-sm font-semibold transition ${
                   pathname === "/about"
                     ? "text-zoho-blue dark:text-blue-400 bg-blue-50/70 dark:bg-blue-950/40"
@@ -245,6 +254,7 @@ export default function Navbar() {
 
               <Link
                 href="/contact"
+                prefetch={true}
                 className={`px-3 py-2 rounded-xl text-sm font-semibold transition ${
                   pathname === "/contact"
                     ? "text-zoho-blue dark:text-blue-400 bg-blue-50/70 dark:bg-blue-950/40"
@@ -339,6 +349,7 @@ export default function Navbar() {
             <div className="space-y-1.5 pt-1">
               <Link
                 href="/"
+                prefetch={true}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-2xl text-base font-bold min-h-[48px] transition ${
                   pathname === "/"
@@ -372,6 +383,7 @@ export default function Navbar() {
                   <div className="px-3 pb-3 pt-1 space-y-1.5 border-t border-slate-200/60 dark:border-slate-800/60">
                     <Link
                       href="/services"
+                      prefetch={true}
                       onClick={() => setMobileMenuOpen(false)}
                       className="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-bold text-zoho-blue dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/40 transition"
                     >
@@ -386,6 +398,7 @@ export default function Navbar() {
                         <Link
                           key={item.href}
                           href={item.href}
+                          prefetch={true}
                           onClick={() => setMobileMenuOpen(false)}
                           className={`flex items-start gap-3 p-3 rounded-xl transition min-h-[48px] ${
                             isActive
@@ -413,6 +426,7 @@ export default function Navbar() {
 
               <Link
                 href="/cctv-packages"
+                prefetch={true}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-2xl text-base font-bold min-h-[48px] transition ${
                   pathname === "/cctv-packages"
@@ -426,6 +440,7 @@ export default function Navbar() {
 
               <Link
                 href="/projects"
+                prefetch={true}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-2xl text-base font-bold min-h-[48px] transition ${
                   pathname === "/projects"
@@ -439,6 +454,7 @@ export default function Navbar() {
 
               <Link
                 href="/areas-we-cover"
+                prefetch={true}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-2xl text-base font-bold min-h-[48px] transition ${
                   pathname === "/areas-we-cover"
@@ -452,6 +468,7 @@ export default function Navbar() {
 
               <Link
                 href="/testimonials"
+                prefetch={true}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-2xl text-base font-bold min-h-[48px] transition ${
                   pathname === "/testimonials"
@@ -465,6 +482,7 @@ export default function Navbar() {
 
               <Link
                 href="/faq"
+                prefetch={true}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-2xl text-base font-bold min-h-[48px] transition ${
                   pathname === "/faq"
@@ -478,6 +496,7 @@ export default function Navbar() {
 
               <Link
                 href="/blog"
+                prefetch={true}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-2xl text-base font-bold min-h-[48px] transition ${
                   pathname === "/blog"
@@ -491,6 +510,7 @@ export default function Navbar() {
 
               <Link
                 href="/about"
+                prefetch={true}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-2xl text-base font-bold min-h-[48px] transition ${
                   pathname === "/about"
@@ -504,6 +524,7 @@ export default function Navbar() {
 
               <Link
                 href="/contact"
+                prefetch={true}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-2xl text-base font-bold min-h-[48px] transition ${
                   pathname === "/contact"
@@ -521,6 +542,7 @@ export default function Navbar() {
           <div className="p-4 sm:p-5 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-2xl flex-shrink-0 space-y-2.5">
             <Link
               href="/quote"
+              prefetch={true}
               onClick={() => setMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-zoho-blue to-blue-600 hover:from-blue-600 hover:to-zoho-blue text-white py-3.5 px-5 rounded-2xl font-bold text-sm shadow-lg shadow-blue-500/25 min-h-[48px]"
             >
