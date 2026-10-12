@@ -1,0 +1,26 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldGrad" x1="10" y1="10" x2="110" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#2F80ED" />
+      <stop offset="45%" stopColor="#1F6FEB" />
+      <stop offset="100%" stopColor="#0B3C96" />
+    </linearGradient>
+    <linearGradient id="boltGrad" x1="45" y1="24" x2="75" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#FFF3B0" />
+      <stop offset="25%" stopColor="#FFD166" />
+      <stop offset="65%" stopColor="#F5A623" />
+      <stop offset="100%" stopColor="#E65100" />
+    </linearGradient>
+    <linearGradient id="goldRing" x1="30" y1="30" x2="90" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#FFE082" />
+      <stop offset="50%" stopColor="#F5A623" />
+      <stop offset="100%" stopColor="#FF8F00" />
+    </linearGradient>
+  </defs>
+  <path d="M60 8 L104 26 V62 C104 88 84 107 60 114 C36 107 16 88 16 62 V26 L60 8 Z" fill="url(#shieldGrad)" stroke="#60A5FA" stroke-width="2.5" />
+  <circle cx="60" cy="58" r="32" fill="#0A1128" stroke="url(#goldRing)" stroke-width="2.5" />
+  <circle cx="60" cy="58" r="23" fill="#030712" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" />
+  <path d="M63 32 L46 56 H59 L52 84 L76 53 H62 L69 32 H63 Z" fill="url(#boltGrad)" stroke="#FFFBEB" stroke-width="1" stroke-linejoin="round" />
+  <circle cx="85" cy="38" r="3.5" fill="#00A86B" />
+  <circle cx="85" cy="38" r="1.5" fill="#FFFFFF" />
+</svg>
