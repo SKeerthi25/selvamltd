@@ -4,6 +4,10 @@ const nextConfig = {
   images: {
     domains: ["images.unsplash.com"],
   },
+  experimental: {
+    workerThreads: false,
+    cpus: 1,
+  },
 };
 
 export default nextConfig;

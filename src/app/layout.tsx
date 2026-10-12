@@ -140,9 +140,6 @@ export default function RootLayout({
         {/* Full-screen 2s Splash Screen with animated logo */}
         <SplashLoader />
 
-        {/* Emergency Electrician Banner */}
-        <EmergencyBanner />
-
         {/* Sticky Top Navbar with Mega Menu */}
         <Navbar />
 

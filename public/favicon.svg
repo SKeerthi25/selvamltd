@@ -1,26 +1,25 @@
-<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="shieldGrad" x1="10" y1="10" x2="110" y2="110" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stopColor="#2F80ED" />
-      <stop offset="45%" stopColor="#1F6FEB" />
-      <stop offset="100%" stopColor="#0B3C96" />
+    <linearGradient id="psBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#2563EB" />
+      <stop offset="50%" stopColor="#1D4ED8" />
+      <stop offset="100%" stopColor="#0F172A" />
     </linearGradient>
-    <linearGradient id="boltGrad" x1="45" y1="24" x2="75" y2="96" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stopColor="#FFF3B0" />
-      <stop offset="25%" stopColor="#FFD166" />
-      <stop offset="65%" stopColor="#F5A623" />
-      <stop offset="100%" stopColor="#E65100" />
+    <linearGradient id="psCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#38BDF8" />
+      <stop offset="100%" stopColor="#0284C7" />
     </linearGradient>
-    <linearGradient id="goldRing" x1="30" y1="30" x2="90" y2="90" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stopColor="#FFE082" />
-      <stop offset="50%" stopColor="#F5A623" />
-      <stop offset="100%" stopColor="#FF8F00" />
+    <linearGradient id="psGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FDE047" />
+      <stop offset="40%" stopColor="#F59E0B" />
+      <stop offset="100%" stopColor="#D97706" />
     </linearGradient>
   </defs>
-  <path d="M60 8 L104 26 V62 C104 88 84 107 60 114 C36 107 16 88 16 62 V26 L60 8 Z" fill="url(#shieldGrad)" stroke="#60A5FA" stroke-width="2.5" />
-  <circle cx="60" cy="58" r="32" fill="#0A1128" stroke="url(#goldRing)" stroke-width="2.5" />
-  <circle cx="60" cy="58" r="23" fill="#030712" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" />
-  <path d="M63 32 L46 56 H59 L52 84 L76 53 H62 L69 32 H63 Z" fill="url(#boltGrad)" stroke="#FFFBEB" stroke-width="1" stroke-linejoin="round" />
-  <circle cx="85" cy="38" r="3.5" fill="#00A86B" />
-  <circle cx="85" cy="38" r="1.5" fill="#FFFFFF" />
+  <rect x="6" y="6" width="88" height="88" rx="24" fill="url(#psBlue)" stroke="url(#psCyan)" stroke-width="2.5" />
+  <circle cx="50" cy="50" r="30" fill="#0A1128" stroke="url(#psGold)" stroke-width="2.5" />
+  <circle cx="50" cy="50" r="23" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 4" />
+  <circle cx="50" cy="50" r="14" fill="#020617" />
+  <path d="M53 26 L38 49 H50 L44 74 L65 47 H52 L57 26 Z" fill="url(#psGold)" stroke="#FFFBEB" stroke-width="1.2" stroke-linejoin="round" />
+  <circle cx="73" cy="27" r="3.5" fill="#10B981" />
+  <circle cx="73" cy="27" r="1.5" fill="#FFFFFF" />
 </svg>

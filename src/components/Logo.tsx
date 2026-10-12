@@ -11,7 +11,7 @@ interface LogoProps {
 
 export default function Logo({
   className = "",
-  size = 46,
+  size = 44,
   showText = false,
   inverted = false,
   animated = false,
@@ -22,121 +22,132 @@ export default function Logo({
       className={`inline-flex ${
         variant === "vertical"
           ? "flex-col items-center text-center gap-3"
-          : "items-center gap-3.5"
+          : "items-center gap-3"
       } ${className}`}
     >
-      {/* Grand Geometric Emblem: Cyber-Shield + 4K CCTV Optics + Dynamic Lightning Bolt */}
+      {/* Ultra-Modern "PS" Tech Mark (Optical CCTV Iris + Electric Power Surge) */}
       <svg
         width={size}
         height={size}
-        viewBox="0 0 120 120"
+        viewBox="0 0 100 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={`flex-shrink-0 transition-transform duration-300 ${
           animated ? "animate-pulse-subtle hover:scale-105" : "hover:scale-105"
         }`}
-        aria-label="P SELVAM LTD - Grand Electrical & CCTV Crest"
+        aria-label="P Selvam - Electrical & CCTV Logo"
       >
         <defs>
-          {/* Electric Blue Royal Gradient */}
-          <linearGradient id="shieldGrad" x1="10" y1="10" x2="110" y2="110" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#2F80ED" />
-            <stop offset="45%" stopColor="#1F6FEB" />
-            <stop offset="100%" stopColor="#0B3C96" />
+          {/* Deep Electric Sapphire Gradient */}
+          <linearGradient id="psBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#2563EB" />
+            <stop offset="50%" stopColor="#1D4ED8" />
+            <stop offset="100%" stopColor="#0F172A" />
           </linearGradient>
 
-          {/* Platinum / Metallic Bevel */}
-          <linearGradient id="platinumBevel" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.8" />
-            <stop offset="50%" stopColor="#93C5FD" stopOpacity="0.4" />
-            <stop offset="100%" stopColor="#1E3A8A" stopOpacity="0.9" />
+          {/* Electric Cyan Neon Accent */}
+          <linearGradient id="psCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#38BDF8" />
+            <stop offset="100%" stopColor="#0284C7" />
           </linearGradient>
 
-          {/* Golden Surge Lightning Gradient */}
-          <linearGradient id="boltGrad" x1="45" y1="24" x2="75" y2="96" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#FFF3B0" />
-            <stop offset="25%" stopColor="#FFD166" />
-            <stop offset="65%" stopColor="#F5A623" />
-            <stop offset="100%" stopColor="#E65100" />
+          {/* Radiant Solar Gold Gradient */}
+          <linearGradient id="psGold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#FDE047" />
+            <stop offset="40%" stopColor="#F59E0B" />
+            <stop offset="100%" stopColor="#D97706" />
           </linearGradient>
 
-          {/* CCTV Aperture Glass Reflex */}
-          <linearGradient id="lensReflex" x1="35" y1="35" x2="85" y2="85" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#1E293B" />
-            <stop offset="50%" stopColor="#0F172A" />
-            <stop offset="100%" stopColor="#020617" />
-          </linearGradient>
-
-          {/* Golden Ring Accent */}
-          <linearGradient id="goldRing" x1="30" y1="30" x2="90" y2="90" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#FFE082" />
-            <stop offset="50%" stopColor="#F5A623" />
-            <stop offset="100%" stopColor="#FF8F00" />
-          </linearGradient>
+          {/* Lens Dark Glass */}
+          <radialGradient id="psLens" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#0F172A" />
+            <stop offset="85%" stopColor="#020617" />
+            <stop offset="100%" stopColor="#1E293B" />
+          </radialGradient>
 
           {/* Subtle Glow Filter */}
-          <filter id="grandGlow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="3.5" result="blur" />
+          <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="2.5" result="blur" />
             <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-
-          {/* Soft Shadow Filter for Depth */}
-          <filter id="emblemShadow" x="-15%" y="-15%" width="130%" height="130%">
-            <feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="#0F172A" floodOpacity="0.35" />
           </filter>
         </defs>
 
-        {/* Outer Hexagonal Security Shield (BS 7671 & Defense Emblem) */}
-        <path
-          d="M60 8 L104 26 V62 C104 88 84 107 60 114 C36 107 16 88 16 62 V26 L60 8 Z"
-          fill="url(#shieldGrad)"
-          stroke="url(#platinumBevel)"
-          strokeWidth="3"
-          filter="url(#emblemShadow)"
+        {/* 1. Modern Rounded Squircle Tech Base with Electric Border */}
+        <rect
+          x="6"
+          y="6"
+          width="88"
+          height="88"
+          rx="24"
+          fill="url(#psBlue)"
+          stroke="url(#psCyan)"
+          strokeWidth="2.5"
+          strokeOpacity="0.85"
         />
 
-        {/* Inner Shield Inset Ridge */}
-        <path
-          d="M60 16 L96 31 V59 C96 81 79 97 60 103 C41 97 24 81 24 59 V31 L60 16 Z"
+        {/* 2. Precision CCTV Lens Outer Ring (Optical Ring) */}
+        <circle
+          cx="50"
+          cy="50"
+          r="30"
+          fill="url(#psLens)"
+          stroke="url(#psGold)"
+          strokeWidth="2.5"
+        />
+
+        {/* 3. Aperture Tick Marks / 360 Surveillance Geometry */}
+        <circle
+          cx="50"
+          cy="50"
+          r="23"
           fill="none"
-          stroke="#60A5FA"
-          strokeWidth="1.2"
-          strokeOpacity="0.4"
+          stroke="#475569"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
         />
 
-        {/* Precision CCTV 360° Optical Turret Ring */}
-        <circle cx="60" cy="58" r="32" fill="url(#lensReflex)" stroke="url(#goldRing)" strokeWidth="2.5" />
+        {/* 4. Optical Sensor Center Pupil */}
+        <circle cx="50" cy="50" r="14" fill="#020617" />
+        <ellipse
+          cx="45"
+          cy="45"
+          rx="4"
+          ry="2.5"
+          transform="rotate(-30 45 45)"
+          fill="#38BDF8"
+          fillOpacity="0.6"
+        />
 
-        {/* Aperture Segments / Radar Crosshairs */}
-        <circle cx="60" cy="58" r="23" fill="#030712" stroke="#334155" strokeWidth="1" strokeDasharray="3 3" />
-
-        {/* Optical Sensor Pupil with Azure Reflection */}
-        <circle cx="60" cy="58" r="14" fill="#0A1128" />
-        <ellipse cx="54" cy="52" rx="4" ry="2.5" transform="rotate(-30 54 52)" fill="#38BDF8" fillOpacity="0.5" />
-
-        {/* High-Voltage Dynamic Lightning Bolt (Precision Geometric Path) */}
+        {/* 5. Dynamic High-Voltage Lightning Bolt (S-Surge Curve) */}
         <path
-          d="M63 32 L46 56 H59 L52 84 L76 53 H62 L69 32 H63 Z"
-          fill="url(#boltGrad)"
+          d="M53 26 L38 49 H50 L44 74 L65 47 H52 L57 26 Z"
+          fill="url(#psGold)"
           stroke="#FFFBEB"
           strokeWidth="1.2"
           strokeLinejoin="round"
-          filter="url(#grandGlow)"
+          filter="url(#softGlow)"
         />
 
-        {/* CCTV Status Indicator Node: Zoho Emerald Green (Active 24/7 Monitoring) */}
-        <circle cx="85" cy="38" r="3.5" fill="#00A86B" />
-        <circle cx="85" cy="38" r="1.5" fill="#FFFFFF" />
-        <circle cx="85" cy="38" r="5" stroke="#00A86B" strokeWidth="0.8" strokeOpacity="0.6" className="animate-ping" />
+        {/* 6. Active Surveillance 24/7 Status Indicator (Zoho Emerald Green) */}
+        <circle cx="73" cy="27" r="3.5" fill="#10B981" />
+        <circle cx="73" cy="27" r="1.5" fill="#FFFFFF" />
+        <circle cx="73" cy="27" r="5" stroke="#10B981" strokeWidth="0.8" strokeOpacity="0.5" className="animate-ping" />
 
-        {/* Dual Circuit Trace Micro-Accents */}
-        <path d="M28 58 H34" stroke="#93C5FD" strokeWidth="1.5" strokeLinecap="round" />
-        <path d="M86 58 H92" stroke="#93C5FD" strokeWidth="1.5" strokeLinecap="round" />
+        {/* 7. Corner Power Circuit Nodes */}
+        <circle cx="24" cy="24" r="2.5" fill="#60A5FA" fillOpacity="0.7" />
+        <circle cx="24" cy="76" r="2.5" fill="#60A5FA" fillOpacity="0.7" />
+        <circle cx="76" cy="76" r="2.5" fill="#60A5FA" fillOpacity="0.7" />
+        <path d="M24 26.5 V35" stroke="#60A5FA" strokeWidth="1.5" strokeOpacity="0.5" />
+        <path d="M24 73.5 V65" stroke="#60A5FA" strokeWidth="1.5" strokeOpacity="0.5" />
       </svg>
 
       {/* Typography Signature */}
       {showText && (
-        <div className={`flex flex-col ${variant === "vertical" ? "items-center" : "items-start"}`}>
+        <div
+          className={`flex flex-col ${
+            variant === "vertical" ? "items-center" : "items-start"
+          }`}
+        >
           <div className="flex items-center gap-1.5">
             <span
               className={`font-heading font-black tracking-[-0.03em] text-xl sm:text-2xl leading-none ${
@@ -154,7 +165,9 @@ export default function Logo({
             <span className="w-1.5 h-1.5 rounded-full bg-zoho-yellow" />
             <span
               className={`text-[10.5px] font-bold tracking-[0.18em] uppercase ${
-                inverted ? "text-slate-300" : "text-slate-600 dark:text-slate-300"
+                inverted
+                  ? "text-slate-300"
+                  : "text-slate-600 dark:text-slate-300"
               }`}
             >
               Electrical &amp; CCTV Experts
