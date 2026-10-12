@@ -44,9 +44,19 @@ export const metadata: Metadata = {
   creator: SITE_INFO.companyName,
   publisher: SITE_INFO.companyName,
   icons: {
-    icon: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/icon-96.png", sizes: "96x96", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
   },
+  manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
     locale: "en_GB",
@@ -57,10 +67,10 @@ export const metadata: Metadata = {
     siteName: SITE_INFO.companyName,
     images: [
       {
-        url: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80",
+        url: `${SITE_INFO.url}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "P Selvam Electrical and CCTV Systems Swindon",
+        alt: "P SELVAM LTD Electrical and CCTV Systems Swindon",
       },
     ],
   },
@@ -68,6 +78,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "P Selvam | Electrical & CCTV Specialists Swindon",
     description: "Certified electricians & 4K smart CCTV installers in Swindon, Wiltshire and surrounding counties.",
+    images: [`${SITE_INFO.url}/og-image.png`],
   },
   alternates: {
     canonical: SITE_INFO.url,
@@ -83,12 +94,41 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Organization",
+        "@id": `${SITE_INFO.url}/#organization`,
+        name: SITE_INFO.companyName,
+        legalName: SITE_INFO.companyName,
+        alternateName: `${SITE_INFO.brandName} Electrical & CCTV`,
+        url: SITE_INFO.url,
+        logo: {
+          "@type": "ImageObject",
+          url: `${SITE_INFO.url}/logo.png`,
+          caption: `${SITE_INFO.companyName} Official Logo`,
+          width: 512,
+          height: 512,
+        },
+        image: `${SITE_INFO.url}/logo.png`,
+        telephone: SITE_INFO.phone,
+        email: SITE_INFO.email,
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            telephone: SITE_INFO.phone,
+            contactType: "customer service",
+            areaServed: "GB",
+            availableLanguage: "English",
+          },
+        ],
+      },
+      {
         "@type": ["Electrician", "LocalBusiness"],
         "@id": `${SITE_INFO.url}/#business`,
         name: SITE_INFO.companyName,
         legalName: SITE_INFO.companyName,
         alternateName: `${SITE_INFO.brandName} Electrical & CCTV`,
         url: SITE_INFO.url,
+        logo: `${SITE_INFO.url}/logo.png`,
+        image: `${SITE_INFO.url}/logo.png`,
         telephone: SITE_INFO.phone,
         email: SITE_INFO.email,
         description:
@@ -131,12 +171,29 @@ export default function RootLayout({
         paymentAccepted: "Cash, Credit Card, Bank Transfer",
         currenciesAccepted: "GBP",
       },
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_INFO.url}/#website`,
+        url: SITE_INFO.url,
+        name: `${SITE_INFO.brandName} Electrical & CCTV`,
+        publisher: {
+          "@id": `${SITE_INFO.url}/#organization`,
+        },
+      },
     ],
   };
 
   return (
     <html lang="en-GB" className={`${inter.variable} ${plusJakartaSans.variable}`}>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/icon-48.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/icon-96.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#1F6FEB" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
