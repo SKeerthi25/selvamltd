@@ -136,11 +136,11 @@ export default function ContactPage() {
                     <span className="block text-xs font-bold uppercase tracking-wider text-slate-400">
                       Operating Hours
                     </span>
-                    <span className="font-medium text-slate-800 dark:text-slate-200">
-                      Monday – Saturday: 08:00 – 18:00
+                    <span className="font-medium text-slate-800 dark:text-slate-200 block">
+                      Monday – Friday: 09:00 – 18:00
                     </span>
-                    <span className="block text-[11px] text-rose-500 font-semibold mt-0.5">
-                      24/7 Emergency Callout Service
+                    <span className="font-medium text-slate-800 dark:text-slate-200 block">
+                      Saturday – Sunday: 10:00 – 16:00
                     </span>
                   </div>
                 </li>

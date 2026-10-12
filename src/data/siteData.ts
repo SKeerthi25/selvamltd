@@ -72,7 +72,7 @@ export const SITE_INFO = {
   domain: "selvamcctv.co.uk",
   url: "https://selvamcctv.co.uk",
   whatsAppLink: "https://wa.me/447774453041?text=Hi%20P%20Selvam%20team,%20I%20would%20like%20to%20enquire%20about%20your%20services.",
-  openingHours: "Monday – Saturday: 08:00 – 18:00 (24/7 Emergency Call-out available)",
+  openingHours: "Mon – Fri: 09:00 – 18:00 | Sat – Sun: 10:00 – 16:00",
   yearEstablished: "2024",
   copyrightYear: "2026",
   serviceAreas: [

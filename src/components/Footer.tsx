@@ -212,8 +212,9 @@ export default function Footer() {
               <li className="flex items-start gap-2.5 pt-1 text-xs text-slate-400">
                 <Clock className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
                 <div>
-                  <span className="block text-slate-300 font-medium">Opening Hours:</span>
-                  <span>{SITE_INFO.openingHours}</span>
+                  <span className="block text-slate-300 font-medium mb-0.5">Opening Hours:</span>
+                  <span className="block text-slate-300">Mon – Fri: 09:00 – 18:00</span>
+                  <span className="block text-slate-400">Sat – Sun: 10:00 – 16:00</span>
                 </div>
               </li>
             </ul>
